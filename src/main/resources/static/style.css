@@ -1,0 +1,390 @@
+/* Google Fonts - Poppins for clean modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* === Global Styles === */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #072736; /* Dark blue background */
+    color: #ffffff; /* Default text color */
+}
+
+/* === Navbar Section === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04222f; /* Deep navy */
+    padding: 20px 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Logo Text Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Logo Image */
+.logo-img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+.nav-links a:hover {
+    color: #00e3b5;
+}
+
+/* Hover Animation for Links */
+.nav-animate {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-animate:hover {
+    color: #00e3b5;
+    transform: translateY(-3px);
+}
+
+/* === Hero Section (Top Heading) === */
+.hero {
+    padding: 5px 60px;
+    text-align: left;
+    max-width: 900px;
+}
+
+.hero h2 {
+    color: #b3e2f5;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #dff6ff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #c2d6df;
+    margin-bottom: 40px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #00e3b5;
+    border: none;
+    color: #04222f;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #04bfa1;
+    color: #ffffff;
+}
+
+/* === Dropdown Menu Styles === */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 260px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown List Items */
+.nav-links .dropdown-menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.nav-links .dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.nav-links .dropdown-menu li a {
+    color: #072736; /* Dark blue text */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect in Dropdown */
+.nav-links .dropdown-menu li a:hover {
+    background-color: #f1f9ff;
+    color: #00aaff;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+/* Show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* === Consulting Banner Section with Image Background === */
+.consulting-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    height: 450px;
+    gap: 40px;
+}
+
+.consulting-text {
+    flex: 1;
+    color: #ffffff;
+    padding: 30px;
+    z-index: 2;
+    max-width: 50%;
+    background: none;
+}
+
+.consulting-image-wrapper {
+    flex: 1;
+    text-align: right;
+}
+
+.consulting-image {
+    max-width: 100%;
+    height: auto;
+    opacity: 2;
+    border-radius: 10px;
+}
+
+.consulting-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.consulting-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+/* make parent li positioned for absolute menu */
+.nav-links .dropdown {
+  position: relative;
+}
+
+/* base styles for hidden dropdown */
+.nav-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 0;
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  
+  /* hide initially */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* show on hover */
+.nav-links .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* style each item */
+.nav-links .dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links .dropdown-menu li + li {
+  margin-top: 12px;
+}
+
+.nav-links .dropdown-menu li a {
+  display: block;
+  padding: 8px 24px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 4px;
+}
+
+/* hover effect inside dropdown */
+.nav-links .dropdown-menu li a:hover {
+  background-color: #f5faff;
+  color: #00aaff;
+}
+
+/* little arrow on the trigger link */
+.nav-links .dropdown > a {
+  position: relative;
+}
+
+/* add arrow symbol */
+.nav-links .dropdown > a::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 0.8em;
+  color: #c2d6df;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* rotate arrow and change color on open */
+.nav-links .dropdown:hover > a::after {
+  transform: rotate(180deg);
+  color: #00e3b5;
+}
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.site-footer {
+  background-color: #072736;
+  color: #ffffff;
+  padding: 60px 40px;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #00e3b5;
+}
+
+/* CTA */
+.footer-cta h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.footer-cta a {
+  color: #00e3b5;
+  font-weight: 600;
+}
+
+/* Columns */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1 1 160px;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li + li {
+  margin-top: 8px;
+}
+
+/* Subscribe form */
+.footer-subscribe .subscribe-form {
+  display: flex;
+  border: 2px solid #00e3b5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+
+.subscribe-form input::placeholder {
+  color: #c2d6df;
+}
+
+.subscribe-form button {
+  background: #00e3b5;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  color: #04222f;
+  font-size: 1.1rem;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-right: 16px;
+  display: inline-block;
+  width: 24px; height: 24px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+

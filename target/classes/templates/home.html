@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SARK Technologies</title>
+
+    <!-- External CSS and Fonts -->
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Navbar with Logo and Navigation Links -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="SARK Logo" class="logo-img" />
+            <span>SARK Technologies</span>
+        </div>
+
+        <ul class="nav-links">
+            <!-- Our Solutions dropdown -->
+            <li class="dropdown">
+                <a href="#" class="nav-animate">Our Solutions</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Managed IT Services</a></li>
+                    <li><a href="#">Cybersecurity Services</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
+                    <li><a href="#">Application Development</a></li>
+                    <li><a href="#">Unified Communications</a></li>
+                </ul>
+            </li>
+
+            <!-- Industries dropdown -->
+            <li class="dropdown">
+                <a href="#" class="nav-animate">Industries</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Small-to-Medium Business</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </li>
+
+            <!-- How We Help link -->
+            <li><a href="#" class="nav-animate">How We Help</a></li>
+
+            <!-- About Us dropdown -->
+            <li class="dropdown">
+                <a href="#" class="nav-animate">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources dropdown -->
+            <li class="dropdown">
+                <a href="#" class="nav-animate">Resources</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Our Resources</a></li>
+                </ul>
+            </li>
+
+            <!-- Contact Us link -->
+            <li><a href="#" class="nav-animate">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Consulting Banner -->
+    <section class="consulting-banner">
+        <div class="consulting-text">
+            <h2>Smart IT Services &amp; Solutions for Growing Businesses</h2>
+            <p>
+                SARK delivers tailored solutions that redefine how companies scale, adapt,
+                and transform digitally. Join us in building a smarter future.
+            </p>
+            <a href="#" class="cta-button">Free Consultation</a>
+        </div>
+
+        <div class="consulting-image-wrapper">
+            <img src="/images/Consulting.png" alt="Consulting Team" class="consulting-image" />
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-cta">
+        <h3>Have more questions? <a href="/contact">Contact Us</a></h3>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">LifetimeACQUIRE™</a></li>
+            <li><a href="#">LifetimeAGENT™</a></li>
+            <li><a href="#">LifetimeSERVICE™</a></li>
+            <li><a href="#">LifetimeENGAGE™</a></li>
+            <li><a href="#">CoreCONNECT</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">About SARK</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">All Resources</a></li>
+            <li><a href="#">Industry Insights</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Collateral</a></li>
+            <li><a href="#">Summit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ecosystem</h4>
+          <ul>
+            <li><a href="#">SARK’s Ecosystem</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-subscribe">
+          <h4>Get Updates</h4>
+          <form action="#" class="subscribe-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">✉️</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="#"><img src="/images/icon-x.svg" alt="X"></a>
+          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"></a>
+        </div>
+        <p>
+          &copy; 2025 SARK Technologies. Various trademarks held by their respective owners. |
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS: Optional scroll effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const bannerText = document.querySelector('.consulting-text');
+            if (window.scrollY > 50) {
+                bannerText.classList.add('scrolled');
+            } else {
+                bannerText.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
